@@ -1,0 +1,357 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-KyZw6T1PeBt+Sw6XPaXVpyfzvG87xFVjTI+6UZ7WuOhwM/LhNl79+g6X9yKk1x+J" crossorigin="anonymous">
+
+        <style>
+            .navbar-brand img {
+                      height: 90px;
+                  }
+          
+                  .navbar-nav .nav-item {
+                      
+                      margin-left: 10px;
+                      
+                  }
+          
+                  .navbar-nav .nav-link i {
+                      margin-right: 5px;
+                      color: #233D81;
+                  }
+          
+                  .navbar-nav .nav-item  .nav-link {
+              color:#233D81;
+              font-size: large;
+              font-weight: bolder;
+              text-decoration: none;
+          
+            }
+           
+           
+            .search-form {
+            float: right;
+            margin: 0;
+            position: relative;
+          }
+          
+          .search-form input[type="text"] {
+            background-color: #eee;
+            border: black;
+            border-radius: 3px;
+            font-size: 14px;
+            height: 40px;
+            padding: 0 10px;
+            width: 150px;
+          }
+          
+          .search-form button {
+            background-color: #333;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 14px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 70px;
+          }
+          .form-inline input[type="search"] {
+            width: 80%;
+          }
+          .map-container {
+			overflow:hidden;
+			position:relative;
+			height:300px;
+		}
+		.map-container iframe {
+			left:0;
+			top:0;
+			height:100%;
+			width:100%;
+			position:absolute;
+		}
+        .container {
+			margin-top: 50px;
+			margin-bottom: 50px;
+			background-color: #f5f5f5;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #bbb;
+		}
+
+		/* Style the form input fields */
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+		}
+
+		/* Style the form submit button */
+		button[type="submit"] {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		/* Style the map container */
+		.map-container {
+			margin-top: 50px;
+			position: relative;
+			overflow: hidden;
+			padding-bottom: 56.25%; /* 16:9 aspect ratio */
+			height: 0;
+		}
+
+		/* Style the map iframe */
+		.map-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+
+		/* Responsive layout - make the form and map container stack on top of each other on small screens */
+		@media (max-width: 767px) {
+			.container {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.map-container {
+				margin-top: 20px;
+			}
+		}
+
+	
+        footer {
+  background-color: #233D81;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container4 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#ul.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ul.footer-links li {
+  margin-bottom: 10px;
+}
+
+#ul.footer-links li a {
+  color: #fff;
+}
+
+#ul.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ul.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#ul.social-icons li:last-child {
+  margin-right: 0;
+}
+
+#ul.social-icons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+}
+
+#ul.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ul.contact-info li {
+  margin-bottom: 10px;
+}
+
+#ul.contact-info li i {
+  margin-right: 10px;
+}
+
+</style>          
+
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="navbar-form navbar-right search-bar">
+                    <!-- Search bar -->
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" style="background-color: #233D81">
+                          <i class="fa fa-search" ></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+          
+                <div class="collapse navbar-collapse" id="navbarNav" >
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item" >
+                            <a class="nav-link" href="post.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="package.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mart.html"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="top.html"><i class="fas fa-chart-line"></i> Top 10</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html"><i class="fas fa-users"></i> My Network</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html"><i class="fas fa-info-circle"></i> Help</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Register</a>
+                            </li>
+                        </ul>
+                      </div>
+                      </div>
+                      </nav>
+                      </header>
+                      <br><br>
+                      <div>
+                        
+                        <h4 style="color: #233D81;text-align: center; font-weight: bolder;">CONTACT US</h4>
+                        <h2 style="text-align: center;">If You Want Any Help, Feel Free <br>To Contact Us
+                        </h2>
+                      </div>
+
+                      <div class="container">
+                        <h1>Contact Us</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message:</label>
+                                        <textarea class="form-control" id="message" rows="5"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.4732095703736!2d-122.40548618469515!3d37.79081647975307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580b296f3ef9b%3A0xfa8d277542d1aefc!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1617719108251!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <div class="container4">
+                          <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                              <h3 id="h3">Navigation</h3>
+                              <ul class="footer-links" id="ul">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Contact</a></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                              <h3 id="h3"> Follow Us</h3>
+                              <ul class="social-icons" id="ul">
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                              <h3 id="h3">Contact Us</h3>
+                              <ul class="contact-info" id="ul">
+                                <li><i class="fa fa-map-marker"></i> 123 Main St, City, State ZIP</li>
+                                <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                                <li><i class="fa fa-envelope"></i> info@example.com</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </footer>
+                     
+      
+    </body>
+</html>

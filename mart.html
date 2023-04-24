@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mart Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-KyZw6T1PeBt+Sw6XPaXVpyfzvG87xFVjTI+6UZ7WuOhwM/LhNl79+g6X9yKk1x+J" crossorigin="anonymous">
+
+
+	<style>
+    .slideshow-container {
+  width: 100%;
+  
+  position: relative;
+  margin:auto;
+}
+.dotclass{
+  height: 25px;
+
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(131, 211, 224);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+}
+.active {
+
+  background-color: red;
+}
+.fade {
+  -webkit-animation-name: none;
+  -webkit-animation-duration: 1.5s ;
+  animation-name: none;
+  animation-duration: 1.5s ;
+  
+}
+
+@-webkit-keyframes none {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes none {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+
+}
+		.navbar-brand img {
+			height: 80px;
+		}
+
+		.navbar-nav .nav-item {
+			
+            margin-left: 10px;
+            
+		}
+
+		.navbar-nav .nav-link i {
+			margin-right: 5px;
+            color: #233D81;
+		}
+
+		.navbar-nav .nav-item  .nav-link {
+    color:#233D81;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+
+  }
+ 
+ 
+  .search-form {
+  float: right;
+  margin: 0;
+  position: relative;
+}
+
+.search-form input[type="text"] {
+  background-color: #eee;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 30px;
+  padding: 0 10px;
+  width: 150px;
+}
+
+.search-form button {
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+}
+.form-inline input[type="search"] {
+  width: 80%;
+}
+.slider-holder
+        {
+            width: 800px;
+            height: 400px;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            overflow: hidden;
+        }
+       
+        .image-holder
+        {
+            width: 2400px;
+            
+            height: 400px;
+            clear: both;
+            position: relative;
+           
+            -webkit-transition: left 2s;
+            -moz-transition: left 2s;
+            -o-transition: left 2s;
+            transition: left 2s;
+        }
+       
+        .slider-image
+        {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+       
+        #slider-image-1:target ~ .image-holder
+        {
+            left: 0px;
+        }
+       
+        #slider-image-2:target ~ .image-holder
+        {
+            left: -800px;
+        }
+       
+        #slider-image-3:target ~ .image-holder
+        {
+            left: -1600px;
+        }
+       
+        .button-holder
+        {
+            position: relative;
+            top: -50px;
+            height: 30px;
+
+        }
+       
+        .slider-change
+        {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            border-radius: 25px;
+            background-color:  #ffde16;
+        }
+        .column1 {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Gallery section styles */
+#gallery {
+  
+background-color: white;
+color:black;
+padding: 50px;
+text-align: center;
+border-color: #333;
+box-shadow: #eee;
+}
+
+#gallery h2 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 20px;
+margin-top: 50px;
+}
+
+.gallery-grid img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 5px;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+transition: all 0.3s ease;
+}
+
+.gallery-grid img:hover {
+transform: scale(1.1);
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+display: inline-block;
+padding: 10px 10px;
+background-color:#233D81;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 5px;
+transition: all 0.3s ease;
+align-items: center;
+}
+
+.cta-button:hover {
+background-color: #333;
+color: #fff;
+}
+#about {
+background-color: #fff;
+padding: 50px;
+text-align: center;
+}
+#about a{
+  text-decoration: none;
+}
+#about h2 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+#about p {
+font-size: 18px;
+margin-bottom: 20px;
+}
+.carousel-item {
+			height: 500px;
+			background-color: #777;
+		}
+    .hr-lines{
+  position: relative;
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  font-weight: bolder;
+color: #233D81;
+}
+
+
+.hr-lines:before{
+  content:" ";
+  height: 10px;
+  width: 150px;
+  background: #233D81;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  
+}
+
+.hr-lines:after{
+  content:" ";
+  height: 10px;
+  width: 150px;
+  background: #233D81;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+.cta-button1 {
+display: inline-block;
+padding: 10px 10px;
+background-color:#233D81;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 5px;
+transition: all 0.3s ease;
+align-items: center;
+}
+
+.cta-button1:hover {
+background-color: #333;
+color: #fff;
+}
+#about1 {
+background-color: #fff;
+padding: 50px;
+text-align: center;
+}
+.container1 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.box1 {
+			flex: 2 1 20%;
+			margin: 10px;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border: 1px solid #ccc;
+			border-radius: 15px;
+
+		}
+
+    .container2 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.box2 {
+			flex: 1 1 50%;
+			margin: 10px;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border: 1px solid #ccc;
+			border-radius:35px;
+		}
+
+    .container3 {
+			display: flex;
+      
+      
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		#h2 {
+			margin-bottom: 20px;
+		}
+
+		#input[type="email"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		#button[type="submit"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: #fff;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		#button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+    footer {
+  background-color: #233D81;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container4 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#ul.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ul.footer-links li {
+  margin-bottom: 10px;
+}
+
+#ul.footer-links li a {
+  color: #fff;
+}
+
+#ul.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ul.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#ul.social-icons li:last-child {
+  margin-right: 0;
+}
+
+#ul.social-icons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+}
+
+#ul.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ul.contact-info li {
+  margin-bottom: 10px;
+}
+
+#ul.contact-info li i {
+  margin-right: 10px;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt="Logo"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+            <form class="navbar-form navbar-right search-bar">
+                <!-- Search bar -->
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" style="background-color: #233D81">
+                      <i class="fa fa-search" ></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+      
+			<div class="collapse navbar-collapse" id="navbarNav" >
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item" >
+						<a class="nav-link" href="post.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Post</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="package.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Packages</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="mart.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="top.html"><i class="fas fa-chart-line"></i> Top 10</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.html"><i class="fas fa-users"></i> My Network</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="help.html"><i class="fas fa-info-circle"></i> Help</a>
+					</li>
+					
+				</ul>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Register</a>
+                        </li>
+                    </ul>
+                  </div>
+                  </div>
+                  </nav>
+                  </header>
+                  <div class="container">
+                    <h2 style="color: #233D81; text-align: center;">Search for products & find verified sellers near you
+                    </h2>
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: #233D81;color: #fff;">Search</button>
+                    </form>
+                  </div>
+
+                  <br><br>
+                  <div class="container">
+      
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ul class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ul>
+                
+                      <!-- The slideshow -->
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="https://uzonmart.com/img/banner/c0747065-830c-43ba-95cc-dfff67ebcb26.jpg" alt="Image 1" style="width:100%; height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://uzonmart.com/img/banner/ab6db5d4-4717-4dbd-96cf-eb3c9bdc39fd.jpg" alt="Image 2" style="width:100%; height: 500px">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://uzonmart.com/img/banner/cd21b9af-4262-4d02-b3ea-f17fec0ef12a.jpg" alt="Image 3" style="width:100%; height: 500px">
+                        </div>
+                      </div>
+                
+                      <!-- Left and right controls -->
+                      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                      </a>
+                      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                      </a>
+                    </div>
+                  </div>
+                
+                
+        <br><br>
+    <section id="gallery">
+      <h2>Personal Services</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1599351431408-433ef72fe40b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhhaXJjdXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Gallery image 1">
+        <img src="https://plus.unsplash.com/premium_photo-1661255367534-301e0ab5ecb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHNoYXZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 2">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGVhZCUyMG1hc3NhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Gallery image 3">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGZhY2lhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 4">
+      </div>
+    </section>
+    
+    <section id="gallery">
+      <h2>Education</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZWR1Y2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 1">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZWR1Y2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 2">
+        <img src="https://images.unsplash.com/photo-1581078426770-6d336e5de7bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGVkdWNhdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 3">
+        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Gallery image 4">
+      </div>
+    </section>
+    
+    <section id="gallery">
+      <h2>Retail Stores and Shops</h2>
+      <div class="gallery-grid">
+        <img src="https://plus.unsplash.com/premium_photo-1663013060152-257fbc35e43d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RvcmVzJTIwYW5kJTIwc2hvcHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Gallery image 1">
+        <img src="https://images.unsplash.com/photo-1464869372688-a93d806be852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3RvcmVzJTIwYW5kJTIwc2hvcHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Gallery image 2">
+        <img src="https://plus.unsplash.com/premium_photo-1663013485744-87698ffea0f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3RvcmVzJTIwYW5kJTIwc2hvcHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Gallery image 3">
+        <img src="https://images.unsplash.com/photo-1521566652839-697aa473761a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RvcmVzJTIwYW5kJTIwc2hvcHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Gallery image 4">
+      </div>
+    </section>
+    
+    <section id="gallery">
+      <h2>Hotel and restaurants</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1527628391783-9fd04631b4ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxzJTIwYW5kJTIwcmVzdGF1cnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 1">
+        <img src="https://images.unsplash.com/photo-1665240519020-fd48c35671a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVscyUyMGFuZCUyMHJlc3RhdXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 2">
+        <img src="https://images.unsplash.com/photo-1466499855940-3d95a5277898?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzJTIwYW5kJTIwcmVzdGF1cnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 3">
+        <img src="https://images.unsplash.com/photo-1466499855940-3d95a5277898?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzJTIwYW5kJTIwcmVzdGF1cnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery image 4">
+      </div>
+    </section>
+    
+    <section id="about">
+     
+      <a href="#" class="cta-button" style="text-align: center;">View More</a>
+    
+    </section>
+    <div class="container">
+      
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+  
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://uzonmart.com/img/banner/60fd2e20-719d-47ec-8342-3c2ec9c5e8d5.jpg" alt="Image 1" style="width:100%; height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="https://uzonmart.com/img/banner/ab8318a7-dfc7-45df-9c37-f561fee52c29.jpg" alt="Image 2" style="width:100%;height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="https://uzonmart.com/img/banner/bb29c75b-948e-4c94-82f5-8129917c6061.jpg" alt="Image 3" style="width:100%;height: 500px;">
+          </div>
+        </div>
+  
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  
+    <script>
+      $(document).ready(function(){
+        // Activate the carousel
+        $("#myCarousel").carousel();
+      });
+    </script>
+  
+ 
+<section id="gallery">
+  <h2 class="hr-lines">TOP10 ON <br>
+    MART </h2>
+  <div class="gallery-grid">
+
+  
+     <div> <img src="https://uzonmart.com/img/Top10/06d61432-3e02-4073-a9cd-e199832f594f.jpg" alt="Gallery image 1" style="height: 380px;"><p><i class="fa-solid fa-calendar-days" style="margin-right: 10px;
+			color: #999;">
+      4/20/2023</i><br>
+     <p style="color: #233D81;font-weight: bolder;"> Top 10 Salons in Navi Mumbai - Mart<br></p>
+      If you're looking for salons in Navi Mumbai that provide a range of services such as haircuts, colo...
+      
+      </p><button style="background-color:#233D81 ; color: #fff;">Read More</button></div>
+
+      <div><img src="https://uzonmart.com/img/Top10/3a2fc5f7-d73c-42d4-b583-f6d1051644d3.jpg" alt="Gallery image 2" style="height: 380px;"><p>4/15/2023</p>
+       <p style="color: #233D81;font-weight: bolder;"> Top 10 Sweet Shops in Mulund - Thane - Mart</p>
+       <p> Sweet Shop is a celebration of sweets that have molded our happiest occasions. Mithai and chocolate ...</p>
+       <button style="background-color:#233D81 ; color: #fff;">Read More</button>
+        </div>
+
+        <div>
+      <img src="https://uzonmart.com/img/Top10/960d82d7-4433-4822-a5d5-6ced33861909.jpg" alt="Gallery image 3" style="height: 380px;">
+      <p>4/3/2023</p>
+      <p style="color: #233D81;font-weight: bolder;">Top 10 Diagnostic Centres in Navi Mumbai</p>
+     <p> Below is a compilation of some of the best diagnostic centers located in Navi Mumbai, India, based o...</p>
+     <button style="background-color:#233D81 ; color: #fff;">Read More</button>
+
+      
+
+    </div>
+    <div>
+      <img src="https://uzonmart.com/img/Top10/51ecc88d-d453-4af0-9e34-0c4b1b214420.jpg" alt="Gallery image 4" style="height: 380px;">
+<p>4/1/2023</p>
+  <p style="color: #233D81;font-weight: bolder;">Top 10 Cake Shops in Thane, Mumbai - Mart</p>
+ <p> Cake is a sweet dessert that is usually baked and has evolved from modifications of bread to a wide...</p>
+  
+  </p>
+      <button style="background-color:#233D81 ; color: #fff;">Read More</button>
+
+    </div>
+    </div>
+  </section>
+  <section id="about1" style="background-color: aliceblue;">
+     
+    <a href="#" class="cta-button1" style="text-align: center;">View More</a>
+    </section>
+    <section id="gallery" style="background-color: aliceblue;">
+      <h2 class="hr-lines">WHAT'S NEW <br>
+        BLOG & UPDATES
+        </h2>
+      <div class="gallery-grid">
+    
+  
+  
+  
+
+  
+     <div> <img src="https://uzonmart.com/img/Posts/9c7dce8c-33a7-4ac7-a7ef-062e5780a997.jpg" alt="Gallery image 1" style="height: 380px;"><p><i class="fa-solid fa-calendar-days" style="margin-right: 10px;
+			color: #999;">
+      4/20/2023</i><br>
+     <p style="color: #233D81;font-weight: bolder;"> Top 10 Salons in Navi Mumbai - Mart<br></p>
+      If you're looking for salons in Navi Mumbai that provide a range of services such as haircuts, colo...
+      
+      </p><button style="background-color:#233D81 ; color: #fff;">Read More</button></div>
+
+      <div><img src="https://uzonmart.com/img/Posts/8d8ab60a-2a69-43cf-b985-91484cef8481.jpg" alt="Gallery image 2" style="height: 380px;"><p>4/15/2023</p>
+       <p style="color: #233D81;font-weight: bolder;"> Top 10 Sweet Shops in Mulund - Thane - Mart</p>
+       <p> Sweet Shop is a celebration of sweets that have molded our happiest occasions. Mithai and chocolate ...</p>
+       <button style="background-color:#233D81 ; color: #fff;">Read More</button>
+        </div>
+
+        <div>
+      <img src="https://uzonmart.com/img/Posts/49fac2d3-2c12-4b56-94f3-1b51653c1f1e.jpg" alt="Gallery image 3" style="height: 380px;">
+      <p>4/3/2023</p>
+      <p style="color: #233D81;font-weight: bolder;">Top 10 Diagnostic Centres in Navi Mumbai</p>
+     <p> Below is a compilation of some of the best diagnostic centers located in Navi Mumbai, India, based o...</p>
+     <button style="background-color:#233D81 ; color: #fff;">Read More</button>
+
+      
+
+    </div>
+    <div>
+      <img src="https://uzonmart.com/img/Posts/498a22b9-8ed8-4f7e-bf05-b9b4924ad070.jpg" alt="Gallery image 4" style="height: 380px;">
+<p>4/1/2023</p>
+  <p style="color: #233D81;font-weight: bolder;">Top 10 Cake Shops in Thane, Mumbai - Mart</p>
+ <p> Cake is a sweet dessert that is usually baked and has evolved from modifications of bread to a wide...</p>
+  
+  </p>
+      <button style="background-color:#233D81 ; color: #fff;">Read More</button>
+
+    </div>
+    </div>
+  </section>
+  <section id="about1">
+     
+    <a href="#" class="cta-button1" style="text-align: center;">View More</a>
+  
+  </section> 
+  <h2 style="padding-left: 50px;color: #233D81;">Popular Brand</h2>
+  <div class="container1">
+   
+		<div class="box1">
+			<h5>S&S Salon Shoots Education</h5>
+			<p>
+        
+        Party Makeup<br>
+        Corporate Makeup<br>
+        Basic Makeup <br>
+        Bride Makeup</p>
+		</div>
+		<div class="box1">
+			<h2> FossTechUzon</h2>
+			<p>
+        
+       
+        E-Commerce <br> 
+        Software<br>
+        Digital Marketing<br>
+        Website<br>
+        Graphic Design<br>
+        Google Products<br>
+        Digital Ads
+        
+        </p>
+		</div>
+        <div class="box1">
+			<h2>Eternity Education</h2>
+			<p> 
+        11th 12th Science MH-CET<br>
+        NEET<br>
+        Pre-Foundation<br>
+        9th, 10th CBSC / ICSE<br>
+        JEE Advance<br>
+        XI + Foundation Course for JEE (Adv)<br>
+        XII + Fresher Course for JEE (Adv)<br>
+        XI + Foundation Course for JEE Main<br>
+        XII + Fresher Course for JEE Main
+       </p>
+		</div>
+	</div>
+
+  <div class="container2">
+		<div class="box2">
+			<h5>Popular Sections</h5>
+			<p>
+        Healthcare | Education | Personal Services | Hotels & Restaurants | Real Estate | IT Services | Retails Stores & Shops |
+        </p>
+		</div>
+		<div class="box2">
+			<h5>Popular Categories</h5>
+			<p>
+        Doctors | Clinics | Hospitals | School | Colleges | Classes | Hair Salons | Cafe | Restaurant | Nail Salons | Spa Salons | Street Food | Traders | Multi Speciality Hospital | Barbershop | Manufacturers | Suppliers | Software Services | Web Design | Wholesalers | Accessories | Super Markets | Shops | Kirana Stores | Local Market | Contractor | Survellience Devices | Catering Service | Tours and Travels | Packers and Movers | Mobile Reparing | Cake Shop | Bakery | Herbal Beauty Products | Sweets Shop | Agents | Builders | Diagnostic Centre | Services | Beauty salon |
+        </p>
+		</div>
+		<div class="box2">
+			<h5>Popular Cities</h5>
+			<p>
+        | Aurangabad | Bengaluru | Karnataka | new Delhi | Uttar Pradesh | West Bengal | Ahmednagar | Aurangabad | Bangalore | Banglore | Basti | Bhatkal | Bidar | Buldana | Delhi | Dombivli | Gujarat | Guntur | Hyderabad | Kalaburagi | Kalaburgi | Kolkata | Latur | Mumbai | Mysore | Nagpur | Navi Mumbai | New Delhi | Pune | Tamil Nadu | Thane | Thane west | Uttar Pradesh | Vasai | Vasai Virar | Virar |
+        </p>
+		</div>
+	</div>
+
+	<div class="container2">
+		<div class="box2">
+			<h5>Popular Areas</h5>
+			<p>
+        Dombivli | Andheri (east) | Aurangabad | Bandra (east) | Bandra (west) | Bangalore | Bhayandar | Bhayandar (east) | Bhayander | Bhiwandi | Borivali (east) | Byculla (east) | Chandivali | Colaba | Dadar (west) | Govandi (east) | Guntur | Kanjurmarg (east) | Karnataka | Kurla | Kurla (west) | Mira Road | Mira Road (east) | Mumbai | Mysore | Naigaon (west) | Naigoan (west) | Nalasopara (west) | Nallasopara (east) | Navi Mumbai | Palava | Parel (east) | Powai | Seawoods (west) | Thane | Thane (west) | Uttar Pradesh | Vasai | Vasai (east) | Vasai (west) | Virar (west) | Ahmednagar | Airoli | Anand Nagar | Andheri | Andheri (east) | Andheri (west) | Aurangabad | Bandra (west) | Banglore | Bhandup | Bhandup (west) | Bhatkal | Bhayandar (east) | Bhayandar (west) | Borabanda | Borivali (west) | Byculla | chandrayangutta | Dadar | Dadar (east) | Dadar (west) | Dahisar | Dahisar (east) | Delhi | Dombivali | Dombivli | Dubai | Gazipura | Ghatkopar (east) | Ghatkopar (west) | Goregaon (west) | Govandi | Govandi (east) | Gujarat | Hyderabad | Jogeshwari | Jogeshwari (west) | Jogeshwari West | Kalaburagi | Kalaburgi | Kalyan | Kandivali (east) | Khar | Kolkata | Kurla | Kurla (west) | Latur | Madanpura | Mahim | Malad (east) | Malad (west) | Manor | Manpada | Mira Road | Mulund | Mulund (east) | Mulund (west) | Mumbai | Mumbra | Mumbra, Thane | Mysore | Mysuru | Nagpur | Naigaon (west) | Naigoan (west) | Nallasopara | Nallasopara (east) | Nallasopara (west) | Naupada | Navi Mumbai | Near SBI Bank, Evershine City, | Nerul | Nerul (east) | Nerul (west) | New Delhi | Noida | Palava | Palghar | Panvel | Powai | Pune | Sakinaka | santacruz (west) | Seawood | Thane | Thane (west) | Uttar Pradesh | Vasai | Vasai (east) | Vasai (west) | Vashi | vidya vihar (west) | Virar | Virar (east) | Virar (west) |
+        </p>
+		</div>
+		<div class="box2">
+			<h5>Top 10</h5>
+			<p>
+        Top 10 Salons in Navi Mumbai - UzonMart | Top 10 Sweet Shops in Mulund - Thane - UzonMart | Top 10 Diagnostic Centres in Navi Mumbai | Top 10 Cake Shops in Thane, Mumbai - UzonMart | Top 10 Diagnostic Centres in Thane, Mumbai. | Top 10 Cake Shops in Navi Mumbai - UzonMart | Top 10 Dental Clinics in Mumbai | Top 10 Hair Salon in Mulund-Thane, Mumbai. | Top 10 Ladies Salon in Mulund-Thane | Top 10 Packers and Movers in Mumbai | Top 10 Classes in Palava | Top 10 Dhaba in Mumbai - Bhiwandi | Top 10 Restaurants in Vasai - Virar | Top 10 Classes in Vasai - Virar | Top 10 Salon In Mulund | Top 10 Cake Shops in Vasai | Top 10 Banks in India |
+        </p>
+		</div>
+		<div class="box2">
+			<h5>Keywords</h5>
+			<p>
+        Best Salon in Mulund | Best Doctor in Mulund | Best restaurant in mulund | Best Mechanicin Mulund |
+        </p>
+		</div>
+	</div>
+  <div class="container3">
+		<h4 id="h2">Get Updates & Special Offers From UzonMart
+    </h4>
+		<form>
+			<input type="email" placeholder="Enter your email address" id="input">
+			<button type="submit" id="button">Subscribe</button>
+		</form>
+	</div>
+  <footer>
+    <div class="container4">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <h3 id="h3">Navigation</h3>
+          <ul class="footer-links" id="ul">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3 id="h3"> Follow Us</h3>
+          <ul class="social-icons" id="ul">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3 id="h3">Contact Us</h3>
+          <ul class="contact-info" id="ul">
+            <li><i class="fa fa-map-marker"></i> 123 Main St, City, State ZIP</li>
+            <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+            <li><i class="fa fa-envelope"></i> info@example.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+
+</body>
+</html>
+                  

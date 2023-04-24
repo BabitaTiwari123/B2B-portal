@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Package</title>
+        <style>
+.navbar-brand img {
+			height: 80px;
+		}
+
+		.navbar-nav .nav-item {
+			
+            margin-left: 10px;
+            
+		}
+
+		.navbar-nav .nav-link i {
+			margin-right: 5px;
+            color: #233D81;
+		}
+
+		.navbar-nav .nav-item  .nav-link {
+    color:#233D81;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+
+  }
+ 
+ 
+  .search-form {
+  float: right;
+  margin: 0;
+  position: relative;
+ 
+}
+
+.search-form input[type="text"] {
+  background-color: #eee;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 30px;
+  padding: 0 10px;
+  width: 150px;
+}
+
+.search-form button {
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+}
+.form-inline input[type="search"] {
+  width: 80%;
+}
+        </style>
+    </head>
+    <body>
+  <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="navbar-form navbar-right search-bar">
+                    <!-- Search bar -->
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" style="background-color: #233D81">
+                          <i class="fa fa-search" ></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+          
+                <div class="collapse navbar-collapse" id="navbarNav" >
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item" >
+                            <a class="nav-link" href="post.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="package.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mart.html"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="top.html"><i class="fas fa-chart-line"></i> Top 10</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html"><i class="fas fa-users"></i> My Network</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html"><i class="fas fa-info-circle"></i> Help</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register.html" style="background-color:#233D81; color: aliceblue; width: 100px; text-align: center;">Register</a>
+                            </li>
+                        </ul>
+                      </div>
+                      </div>
+                      </nav>
+                      </header>
+      <div>
+        <h2 style="text-align: center;">Choose Your Edition.Your Annually Plan Will Start as low as ₹29999.
+        </h2>
+      </div>
+    </body>
+</html>
